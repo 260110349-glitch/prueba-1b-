@@ -1,33 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimuVector-TIC — Proyecto Integrador ITSOEH (Grupo 1 "B")</title>
-  <link rel="stylesheet" href="css/estilos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programa de Cálculo Geométrico-Vectorial y Evaluador de Impuestos — ITSOEH 1° "B"</title>
+<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <header>
-    <h1>Programa de Cálculo Geométrico-Vectorial y Evaluador de Impuestos Tecnológicos (SimuVector-TIC)</h1>
-    <p>ITSOEH — Ingeniería en Tecnologías de la Información y Comunicaciones — Grupo 1 "B"</p>
-  </header>
-  <main>
-    <section id="planteamiento">
-      <h2>Planteamiento</h2>
-      <p>Sección en construcción (T03).</p>
-    </section>
-    <section id="metodologia">
-      <h2>Metodología</h2>
-      <p>Sección en construcción (T04).</p>
-    </section>
-    <section id="integrantes">
-      <h2>Integrantes</h2>
-      <p>Sección en construcción (T05).</p>
-    </section>
-    <section id="resultados">
-      <h2>Resultados y Conclusiones</h2>
-      <p>Sección en construcción (T12).</p>
-    </section>
-  </main>
+<header class="encabezado">
+<div class="contenedor">
+  <p class="etiqueta">ITSOEH · Ingeniería en Tecnologías de la Información y Comunicaciones · Grupo 1 "B"</p>
+  <h1>Programa de Cálculo Geométrico-Vectorial y Evaluador de Impuestos</h1>
+  <p class="subtitulo">Proyecto Integrador — Fundamentos de Investigación (Agosto–Diciembre 2026)</p>
+</div>
+</header>
+
+<nav class="navegacion">
+<div class="contenedor">
+  <a href="#planteamiento">Planteamiento</a>
+  <a href="#metodologia">Metodología</a>
+  <a href="#integrantes">Integrantes</a>
+  <a href="#resultados">Resultados y Conclusiones</a>
+</div>
+</nav>
+
+<main class="contenedor">
+<section id="planteamiento" class="tarjeta">
+  <h2>Planteamiento del Problema</h2>
+  <p>El proyecto integra dos módulos desarrollados en Java para resolver necesidades académicas y de apoyo a la toma de decisiones tecnológicas:</p>
+  <div class="grid-dos">
+    <article class="subtarjeta">
+      <h3>Módulo 1: Cálculo Geométrico-Vectorial</h3>
+      <p>Calcula incrementos en X ($\Delta x$) y Y ($\Delta y$), pendiente ($m$) y magnitud ($d$) entre dos puntos $P_1(x_1, y_1)$ y $P_2(x_2, y_2)$ en el plano cartesiano, validando la división entre cero cuando $\Delta x = 0$.</p>
+    </article>
+    <article class="subtarjeta">
+      <h3>Módulo 2: Evaluador Financiero-Lógico de Impuestos</h3>
+      <p>Evalúa tasas impositivas del 0%, 8% o 16% sobre el costo base de equipo tecnológico mediante lógica proposicional según acreditación estudiantil ($p$) y pertenencia al catálogo educativo ($q$).</p>
+    </article>
+  </div>
+</section>
+
+<section id="metodologia" class="tarjeta">
+  <h2>Metodología de Trabajo</h2>
+  <p>El desarrollo se estructuró bajo el marco de las <strong>6 D's</strong>, modelado de procesos con diagramas de flujo <strong>ISO 5807</strong>, control de versiones en Git con ramas por tarea y Pull Requests hacia <code>main</code>, y pruebas manuales documentadas por módulo.</p>
+  <ul class="lista-pasos">
+    <li><strong>Definir y Diseñar:</strong> Especificación de entradas, fórmulas vectoriales, reglas lógicas y flujos ISO 5807.</li>
+    <li><strong>Desarrollar y Depurar:</strong> Implementación en Java, compilación con <code>javac</code> y control de entradas inválidas.</li>
+    <li><strong>Documentar y Desplegar:</strong> Registro de tareas en <code>TAREAS.md</code>, documentación técnica en <code>README.md</code> y publicación web.</li>
+  </ul>
+</section>
+
+<section id="integrantes" class="tarjeta">
+  <h2>Integrantes del Equipo — Grupo 1 "B"</h2>
+  <div class="tabla-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Matrícula</th>
+          <th>Nombre completo</th>
+          <th>Rol en el proyecto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>260110862</td>
+          <td>Gutiérrez Hernández Hendrick Owen</td>
+          <td>Integrante · Equipo 1 "B"</td>
+        </tr>
+        <tr>
+          <td>260110802</td>
+          <td>Cornejo Porras Uzziel Martín</td>
+          <td>Integrante · Equipo 1 "B"</td>
+        </tr>
+        <tr>
+          <td>260110042</td>
+          <td>Avecias Jiménez Hanitzy</td>
+          <td>Integrante · Equipo 1 "B"</td>
+        </tr>
+        <tr>
+          <td>260110349</td>
+          <td>Gálvez Ortiz Leonardo</td>
+          <td>Integrante · Control Git y publicación</td>
+        </tr>
+        <tr>
+          <td>260110810</td>
+          <td>López Hernández Saúl</td>
+          <td>Integrante · Equipo 1 "B"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="resultados" class="tarjeta">
+  <h2>Resultados y Conclusiones</h2>
+  <p>Ambos módulos fueron verificados mediante 10 casos de prueba manuales cada uno (20 pruebas en total), cubriendo valores enteros, decimales, negativos, magnitudes altas y validación de entradas inválidas:</p>
+  <ul class="lista-pasos">
+    <li><strong>Módulo Geométrico-Vectorial:</strong> Resolvió correctamente casos base como $(0,0) \to (3,4)$ con $\Delta x = 3.00$, $\Delta y = 4.00$ y magnitud $5.00$ unidades, además de casos de alta precisión y rechazo de entradas no numéricas.</li>
+    <li><strong>Módulo Financiero-Lógico:</strong> Aplicó con exactitud la exención del 0% ($p=1, q=1$), tasa del 8% ($p \oplus q$) y tasa general del 16% ($p=0, q=0$) sobre montos de prueba.</li>
+    <li><strong>Conclusión:</strong> Separar el código Java, los casos de prueba, la documentación técnica y el seguimiento por ramas facilitó la trazabilidad y redujo errores de integración.</li>
+  </ul>
+</section>
+</main>
+
+<footer class="pie">
+<div class="contenedor">
+  <p>ITSOEH · Fundamentos de Investigación · Docente: Pedro Jhoan Salazar Pérez</p>
+</div>
+</footer>
 </body>
 </html>
