@@ -1,112 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Programa de Cálculo Geométrico-Vectorial y Evaluador de Impuestos — ITSOEH 1° "B"</title>
-<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Integrador 1° "B" — Cálculo Geométrico-Vectorial y Evaluador de Impuestos</title>
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-<header class="encabezado">
-<div class="contenedor">
-  <p class="etiqueta">ITSOEH · Ingeniería en Tecnologías de la Información y Comunicaciones · Grupo 1 "B"</p>
-  <h1>Programa de Cálculo Geométrico-Vectorial y Evaluador de Impuestos</h1>
-  <p class="subtitulo">Proyecto Integrador — Fundamentos de Investigación (Agosto–Diciembre 2026)</p>
-</div>
-</header>
+  <header class="encabezado">
+    <div class="contenedor">
+      <p class="etiqueta">ITSOEH · Ingeniería en Tecnologías de la Información y Comunicaciones · Grupo 1 "B"</p>
+      <h1>Programa de Cálculo Geométrico-Vectorial y Evaluador de Impuestos</h1>
+      <p class="subtitulo">Proyecto Integrador de Primer Semestre · Periodo Agosto–Diciembre 2026</p>
+      <div class="meta-repo">
+        <span><strong>Repositorio:</strong> <a href="https://github.com/260110349-glitch/prueba-1b-" target="_blank" rel="noopener">github.com/260110349-glitch/prueba-1b-</a></span>
+        <span><strong>Sitio web:</strong> <a href="https://260110349-glitch.github.io/prueba-1b-/" target="_blank" rel="noopener">260110349-glitch.github.io/prueba-1b-/</a></span>
+      </div>
+    </div>
+  </header>
 
-<nav class="navegacion">
-<div class="contenedor">
-  <a href="#planteamiento">Planteamiento</a>
-  <a href="#metodologia">Metodología</a>
-  <a href="#integrantes">Integrantes</a>
-  <a href="#resultados">Resultados y Conclusiones</a>
-</div>
-</nav>
+  <nav class="navegacion" aria-label="Navegación principal">
+    <div class="contenedor">
+      <a href="#objetivo">Objetivo</a>
+      <a href="#problematica">Problemática</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#integrantes">Integrantes</a>
+      <a href="#resultados">Análisis de Resultados</a>
+      <a href="#conclusion">Conclusión</a>
+    </div>
+  </nav>
 
-<main class="contenedor">
-<section id="planteamiento" class="tarjeta">
-  <h2>Planteamiento del Problema</h2>
-  <p>El proyecto integra dos módulos desarrollados en Java para resolver necesidades académicas y de apoyo a la toma de decisiones tecnológicas:</p>
-  <div class="grid-dos">
-    <article class="subtarjeta">
-      <h3>Módulo 1: Cálculo Geométrico-Vectorial</h3>
-      <p>Calcula incrementos en X ($\Delta x$) y Y ($\Delta y$), pendiente ($m$) y magnitud ($d$) entre dos puntos $P_1(x_1, y_1)$ y $P_2(x_2, y_2)$ en el plano cartesiano, validando la división entre cero cuando $\Delta x = 0$.</p>
-    </article>
-    <article class="subtarjeta">
-      <h3>Módulo 2: Evaluador Financiero-Lógico de Impuestos</h3>
-      <p>Evalúa tasas impositivas del 0%, 8% o 16% sobre el costo base de equipo tecnológico mediante lógica proposicional según acreditación estudiantil ($p$) y pertenencia al catálogo educativo ($q$).</p>
-    </article>
-  </div>
-</section>
+  <main class="contenedor">
+    <section id="objetivo" class="tarjeta">
+      <h2>1. Objetivo del Proyecto</h2>
+      <p>Desarrollar, documentar y validar dos programas modulares en lenguaje Java que resuelvan cálculos geométrico-vectoriales en el plano cartesiano y evaluaciones fiscales mediante lógica proposicional, gestionando el trabajo colaborativo del equipo mediante ramas, Pull Requests y publicación web en GitHub Pages.</p>
+    </section>
 
-<section id="metodologia" class="tarjeta">
-  <h2>Metodología de Trabajo</h2>
-  <p>El desarrollo se estructuró bajo el marco de las <strong>6 D's</strong>, modelado de procesos con diagramas de flujo <strong>ISO 5807</strong>, control de versiones en Git con ramas por tarea y Pull Requests hacia <code>main</code>, y pruebas manuales documentadas por módulo.</p>
-  <ul class="lista-pasos">
-    <li><strong>Definir y Diseñar:</strong> Especificación de entradas, fórmulas vectoriales, reglas lógicas y flujos ISO 5807.</li>
-    <li><strong>Desarrollar y Depurar:</strong> Implementación en Java, compilación con <code>javac</code> y control de entradas inválidas.</li>
-    <li><strong>Documentar y Desplegar:</strong> Registro de tareas en <code>TAREAS.md</code>, documentación técnica en <code>README.md</code> y publicación web.</li>
-  </ul>
-</section>
+    <section id="problematica" class="tarjeta">
+      <h2>2. Problemática</h2>
+      <p>En el entorno académico y técnico de primer semestre se requiere automatizar cálculos repetitivos propensos a errores manuales en dos escenarios concretos:</p>
+      <div class="grid-dos">
+        <article class="subtarjeta">
+          <h3>Problema 1: Cálculo Geométrico-Vectorial</h3>
+          <p>Obtener de forma precisa los incrementos en ejes (&Delta;x = x<sub>2</sub> &minus; x<sub>1</sub>, &Delta;y = y<sub>2</sub> &minus; y<sub>1</sub>), la pendiente (m = &Delta;y / &Delta;x) y la magnitud del vector (d = &radic;(&Delta;x<sup>2</sup> + &Delta;y<sup>2</sup>)) entre dos puntos P<sub>1</sub>(x<sub>1</sub>, y<sub>1</sub>) y P<sub>2</sub>(x<sub>2</sub>, y<sub>2</sub>), evitando fallos por división entre cero cuando &Delta;x = 0.</p>
+          <p class="enlace-doc"><a href="https://github.com/260110349-glitch/prueba-1b-/tree/main/problemas/problema-1" target="_blank" rel="noopener">Ver código fuente, documentación y pruebas del Problema 1 &rarr;</a></p>
+        </article>
+        <article class="subtarjeta">
+          <h3>Problema 2: Evaluador Financiero-Lógico de Impuestos</h3>
+          <p>Determinar automáticamente la tasa impositiva aplicable en la adquisición de equipo tecnológico a partir de dos proposiciones binarias: acreditación estudiantil (p) y pertenencia al catálogo educativo (q), asignando exención del 0% (p &and; q), tasa reducida del 8% (p &oplus; q) o tasa general del 16% (&not;p &and; &not;q).</p>
+          <p class="enlace-doc"><a href="https://github.com/260110349-glitch/prueba-1b-/tree/main/problemas/problema-2" target="_blank" rel="noopener">Ver código fuente, documentación y pruebas del Problema 2 &rarr;</a></p>
+        </article>
+      </div>
+    </section>
 
-<section id="integrantes" class="tarjeta">
-  <h2>Integrantes del Equipo — Grupo 1 "B"</h2>
-  <div class="tabla-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Matrícula</th>
-          <th>Nombre completo</th>
-          <th>Rol en el proyecto</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>260110862</td>
-          <td>Gutiérrez Hernández Hendrick Owen</td>
-          <td>Integrante · Equipo 1 "B"</td>
-        </tr>
-        <tr>
-          <td>260110802</td>
-          <td>Cornejo Porras Uzziel Martín</td>
-          <td>Integrante · Equipo 1 "B"</td>
-        </tr>
-        <tr>
-          <td>260110042</td>
-          <td>Avecias Jiménez Hanitzy</td>
-          <td>Integrante · Equipo 1 "B"</td>
-        </tr>
-        <tr>
-          <td>260110349</td>
-          <td>Gálvez Ortiz Leonardo</td>
-          <td>Integrante · Control Git y publicación</td>
-        </tr>
-        <tr>
-          <td>260110810</td>
-          <td>López Hernández Saúl</td>
-          <td>Integrante · Equipo 1 "B"</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+    <section id="metodologia" class="tarjeta">
+      <h2>3. Metodología de Trabajo</h2>
+      <p>El equipo aplicó un flujo de ingeniería de software y colaboración estructurado en cuatro etapas:</p>
+      <div class="grid-dos">
+        <div class="subtarjeta">
+          <h3>Análisis y Diseño (6 D's e ISO 5807)</h3>
+          <p>Definición de variables de entrada, tipos de datos numéricos y booleanos, validaciones de dominio y modelado de la lógica de decisión mediante diagramas de flujo bajo estándar ISO 5807 antes de codificar.</p>
+        </div>
+        <div class="subtarjeta">
+          <h3>Programación Modular en Java</h3>
+          <p>Implementación de clases independientes (<code>ModuloGeometricoVectorial.java</code> y <code>ModuloFinancieroLogico.java</code>) con estructuras selectivas, ciclos de repetición controlada y verificación de compilación mediante <code>javac</code>.</p>
+        </div>
+        <div class="subtarjeta">
+          <h3>Pruebas Manuales de Escritorio</h3>
+          <p>Diseño de 10 casos de prueba por módulo (20 en total) calculados manualmente antes de la ejecución, cubriendo valores habituales, decimales de alta precisión, números negativos, montos extremos y entradas no válidas.</p>
+        </div>
+        <div class="subtarjeta">
+          <h3>Colaboración con Git y GitHub</h3>
+          <p>Control de versiones con ramas independientes por tarea (<code>T01</code> a <code>T16</code>), integración hacia <code>main</code> mediante Pull Requests documentados, registro de avances en <code>TAREAS.md</code> y despliegue continuo en GitHub Pages.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="resultados" class="tarjeta">
-  <h2>Resultados y Conclusiones</h2>
-  <p>Ambos módulos fueron verificados mediante 10 casos de prueba manuales cada uno (20 pruebas en total), cubriendo valores enteros, decimales, negativos, magnitudes altas y validación de entradas inválidas:</p>
-  <ul class="lista-pasos">
-    <li><strong>Módulo Geométrico-Vectorial:</strong> Resolvió correctamente casos base como $(0,0) \to (3,4)$ con $\Delta x = 3.00$, $\Delta y = 4.00$ y magnitud $5.00$ unidades, además de casos de alta precisión y rechazo de entradas no numéricas.</li>
-    <li><strong>Módulo Financiero-Lógico:</strong> Aplicó con exactitud la exención del 0% ($p=1, q=1$), tasa del 8% ($p \oplus q$) y tasa general del 16% ($p=0, q=0$) sobre montos de prueba.</li>
-    <li><strong>Conclusión:</strong> Separar el código Java, los casos de prueba, la documentación técnica y el seguimiento por ramas facilitó la trazabilidad y redujo errores de integración.</li>
-  </ul>
-</section>
-</main>
+    <section id="integrantes" class="tarjeta">
+      <h2>4. Integrantes del Equipo — Grupo 1 "B"</h2>
+      <p>Registro oficial de participantes, datos institucionales y enlaces a las páginas personales publicadas en GitHub Pages:</p>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Fotografía</th>
+              <th>Nombre completo</th>
+              <th>Matrícula</th>
+              <th>Correo institucional</th>
+              <th>Página personal (GitHub Pages)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="img/integrantes/hendrick-gutierrez.jpg" alt="Foto formal de Gutiérrez Hernández Hendrick Owen" class="foto-integrante" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"><span class="avatar-placeholder" style="display:none;">HG</span></td>
+              <td>Gutiérrez Hernández Hendrick Owen</td>
+              <td>260110862</td>
+              <td><a href="mailto:260110862@itsoeh.edu.mx">260110862@itsoeh.edu.mx</a></td>
+              <td>Pendiente de enlace personal</td>
+            </tr>
+            <tr>
+              <td><img src="img/integrantes/uzziel-cornejo.jpg" alt="Foto formal de Cornejo Porras Uzziel Martín" class="foto-integrante" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"><span class="avatar-placeholder" style="display:none;">UC</span></td>
+              <td>Cornejo Porras Uzziel Martín</td>
+              <td>260110802</td>
+              <td><a href="mailto:260110802@itsoeh.edu.mx">260110802@itsoeh.edu.mx</a></td>
+              <td>Pendiente de enlace personal</td>
+            </tr>
+            <tr>
+              <td><img src="img/integrantes/hanitzy-avecias.jpg" alt="Foto formal de Avecias Jiménez Hanitzy" class="foto-integrante" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"><span class="avatar-placeholder" style="display:none;">HA</span></td>
+              <td>Avecias Jiménez Hanitzy</td>
+              <td>260110042</td>
+              <td><a href="mailto:260110042@itsoeh.edu.mx">260110042@itsoeh.edu.mx</a></td>
+              <td>Pendiente de enlace personal</td>
+            </tr>
+            <tr>
+              <td><img src="img/integrantes/leonardo-galvez.jpg" alt="Foto formal de Gálvez Ortiz Leonardo" class="foto-integrante" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"><span class="avatar-placeholder" style="display:none;">LG</span></td>
+              <td>Gálvez Ortiz Leonardo</td>
+              <td>260110349</td>
+              <td><a href="mailto:260110349@itsoeh.edu.mx">260110349@itsoeh.edu.mx</a></td>
+              <td><a href="https://260110349-glitch.github.io/hiumbe/" target="_blank" rel="noopener">260110349-glitch.github.io/hiumbe/</a></td>
+            </tr>
+            <tr>
+              <td><img src="img/integrantes/saul-lopez.jpg" alt="Foto formal de López Hernández Saúl" class="foto-integrante" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"><span class="avatar-placeholder" style="display:none;">SL</span></td>
+              <td>López Hernández Saúl</td>
+              <td>260110810</td>
+              <td><a href="mailto:260110810@itsoeh.edu.mx">260110810@itsoeh.edu.mx</a></td>
+              <td>Pendiente de enlace personal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<footer class="pie">
-<div class="contenedor">
-  <p>ITSOEH · Fundamentos de Investigación · Docente: Pedro Jhoan Salazar Pérez</p>
-</div>
-</footer>
+    <section id="resultados" class="tarjeta">
+      <h2>5. Análisis de Resultados</h2>
+      <p>La ejecución de los 20 casos de prueba manuales (10 por programa) demostró coincidencia total entre los cálculos realizados a mano y las salidas producidas en consola, con redondeo controlado a dos cifras decimales:</p>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Módulo</th>
+              <th>Casos probados</th>
+              <th>Escenarios cubiertos</th>
+              <th>Resultado de verificación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Módulo 1: Geométrico-Vectorial</td>
+              <td>10 casos</td>
+              <td>Coordenadas origen (0,0) &rarr; (3,4) con magnitud 5.00, decimales extensos, cuadrantes negativos y validación de cadenas no numéricas.</td>
+              <td>10 / 10 coincidentes (Sí)</td>
+            </tr>
+            <tr>
+              <td>Módulo 2: Financiero-Lógico</td>
+              <td>10 casos</td>
+              <td>Combinaciones (0,0), (0,1), (1,0) y (1,1) con tasas del 16%, 8% y 0% sobre montos base estándar, decimales y cifras superiores a un billón.</td>
+              <td>10 / 10 coincidentes (Sí)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid-dos">
+        <div class="subtarjeta">
+          <h3>Dificultades encontradas</h3>
+          <p>Al capturar coordenadas separadas por coma y alternar lecturas de texto (<code>nextLine</code>) con valores numéricos (<code>nextInt</code> / <code>nextDouble</code>) en <code>Scanner</code>, se presentaron saltos de búfer que requerían limpiar el salto de línea tras cada lectura numérica. En Git, también fue necesario sincronizar localmente <code>main</code> antes de abrir nuevas ramas para evitar desactualizaciones.</p>
+        </div>
+        <div class="subtarjeta">
+          <h3>Limitaciones de la solución</h3>
+          <p>Ambos programas operan exclusivamente en interfaz de línea de comandos (consola) sin persistencia en archivos o base de datos, y el módulo geométrico trabaja únicamente en dos dimensiones (R<sup>2</sup>), por lo que no contempla vectores tridimensionales (x, y, z).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusion" class="tarjeta">
+      <h2>6. Conclusión</h2>
+      <p>Se cumplió el objetivo de construir y verificar dos herramientas funcionales en Java que resuelven problemas geométricos y de evaluación lógica fiscal con exactitud comprobada en los 20 casos de prueba documentados. Asimismo, el flujo de trabajo con ramas, Pull Requests y publicación en GitHub Pages permitió mantener trazabilidad clara de cada entregable y asegurar una versión estable del proyecto en la rama principal.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>ITSOEH · Ingeniería en Tecnologías de la Información y Comunicaciones · Grupo 1 "B" · Proyecto Integrador</p>
+    </div>
+  </footer>
 </body>
 </html>
